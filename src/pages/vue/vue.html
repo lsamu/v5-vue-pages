@@ -8,10 +8,10 @@
 </head>
 
 <body>
-    ${require(`html-loader?interpolate!@/common/header.html`)}
-    vue
     <div id="app">
-
+        ${require(`html-loader?interpolate!@/common/header.html`)}
+        vue
+        <button @model="title">Submit</button>
     </div>
 </body>
 

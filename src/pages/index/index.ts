@@ -1,4 +1,5 @@
-import '@/assets/style.less'
+import '@/assets/css/style.css'
+import '@/assets/less/ss.less'
 
 console.log("index");
 

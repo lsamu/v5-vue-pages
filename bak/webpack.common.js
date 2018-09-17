@@ -4,8 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
-var entries = getEntry('src/controllers/**/*Controller.ts', 'src/controllers/');
+var entries = getEntry('src/pages/**/*.ts', 'src/pages/');
 var chunks = Object.keys(entries);
+console.log(entries);
 
 var config = {
     entry: entries,
@@ -36,6 +37,10 @@ var config = {
                 test: /\.vue$/,
                 use: 'vue-loader'
             },
+            {
+                test: /\.html$/,
+                use: 'html-loader'
+            },
             //加载css
             // {
             //     test: /\.css$/,
@@ -51,7 +56,7 @@ var config = {
                     // 需要下载file-loader和url-loader
                     loader: "url-loader",
                     options: {
-                        name: 'images/[name].[hash:7].[ext]', // 图片输出的路径
+                        name: 'img/[name].[hash:7].[ext]', // 图片输出的路径
                         limit: 50,
                         // 图片文件输出的文件夹
                         //outputPath: "img"
