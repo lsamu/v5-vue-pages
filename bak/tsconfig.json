@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    //"noImplicitAny": true,
+    "target": "es5",
+    "module": "commonjs",
+    //"module": "amd",
+    "removeComments": true,
+    "lib": ["dom", "es2015", "es2017", "es5", "es2015.promise"],
+    "allowJs": true
+  },
+  "exclude": ["node_modules"]
+}
