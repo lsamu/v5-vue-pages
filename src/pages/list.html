@@ -1,18 +1,12 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>list</title>
 </head>
-
 <body>
-    <div id="app">
-        ${require(`html-loader?interpolate!@/common/header.html`)}
-        vue
-        <button @model="title">Submit</button>
-    </div>
+    #include("@/common/header.html")
+    list hello
 </body>
-
 </html>
