@@ -64,6 +64,10 @@ var config = {
                 }
                 ]
             },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use:['file-loader']
+            },
             //加载字体
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/,
@@ -89,9 +93,9 @@ var config = {
         //删除dist目录
         // new CleanWebpackPlugin(['dist']),
         // //创建index.html
-        // new HtmlWebpackPlugin({
-        //     title: 'Output Management'
-        // }),
+        new HtmlWebpackPlugin({
+            title: 'Output Management'
+        }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],

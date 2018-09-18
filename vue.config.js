@@ -27,6 +27,13 @@ module.exports = {
 	devServer: {
 		index: 'index.html',
 	},
+	chainWebpack: config =>{
+		config.module
+		.rule('img')
+		.test(/\.(png|jpg|gif)$/)
+		.use('file-loader')
+		//.end()
+	},
 	// configureWebpack: config => {
 	// 	//config.resolve.extensions.push(".html")
 	// 	config.plugins.push(
