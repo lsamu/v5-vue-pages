@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-/
+    <title>测试Vue</title>
+</head>
 <body>
     #include("@/common/header.html")
 
     vue
     <div id="app">
         {{title}}
-        vue
+        <br>
+        {{message}}
+        <br>
+        <form action="">
+            <input type="text" v-model="message">
+        </form>
     </div>
 </body>
 

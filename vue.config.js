@@ -1,7 +1,11 @@
+/**
+ * 主要参考  
+ * html 图片解析 包含文件 html-withimg-loader 
+ * html 中vue中SEO优化 预编译 prerender-spa-plugin
+ */
 let path = require('path');
 let glob = require('glob');
 const debug = process.env.NODE_ENV !== 'production';
-
 //配置pages多页面获取当前文件夹下的html和js
 function getEntry(globPath = './src/pages/**/*.html', pathDir = "./src/pages/") {
 	let entries = {},
@@ -18,26 +22,27 @@ function getEntry(globPath = './src/pages/**/*.html', pathDir = "./src/pages/") 
 	});
 	return entries;
 }
-
 let pages = getEntry();
-console.log(debug);
 module.exports = {
-	baseUrl: '/',
+	baseUrl: './',
 	pages,
 	productionSourceMap: false,
 	devServer: {
 		index: 'index.html',
 	},
 	filenameHashing: debug,
+	runtimeCompiler: true,
 	chainWebpack: config => {
-		//不压缩html 单个指定 需要做一个循环指定不压缩
-		config
-			.plugin('html-index')
-			.tap(args => {
-				//是否最小化html 压缩html
-				args[0].minify = false
-				return args
-			});
+		//不压缩html
+		for (const key in pages) {
+			config
+				.plugin('html-' + key)
+				.tap(args => {
+					//是否最小化html 压缩html
+					args[0].minify = false
+					return args
+				});
+		}
 		//注册插件
 		config.module
 			.rule('html')
