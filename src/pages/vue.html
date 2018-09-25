@@ -10,7 +10,27 @@
     #include("@/common/header.html")
 
     vue
-    <div id="app">
+    <div id="app1">
+        {{title}}
+        <br>
+        {{message}}
+        <br>
+        <form action="">
+            <input type="text" v-model="message">
+        </form>
+    </div>
+
+    <div id="app2">
+        {{title}}
+        <br>
+        {{message}}
+        <br>
+        <form action="">
+            <input type="text" v-model="message">
+        </form>
+    </div>
+
+    <div id="app3">
         {{title}}
         <br>
         {{message}}
