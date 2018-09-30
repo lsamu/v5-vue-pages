@@ -24,7 +24,6 @@ function getEntry(globPath = './src/pages/**/*.html', pathDir = "./src/pages/") 
 	return entries;
 }
 let pages = getEntry('./src/pages_' + dir + '/**/!(_*).html', "./src/pages_" + dir + "/");
-console.log(pages)
 module.exports = {
 	baseUrl: '/',
 	pages,
