@@ -3,6 +3,7 @@
  * html 图片解析 包含文件 html-withimg-loader 
  * html 中vue中SEO优化 预编译 prerender-spa-plugin
  */
+let dir = "default"; //模板目录 default qimiao bohe
 let path = require('path');
 let glob = require('glob');
 const debug = process.env.NODE_ENV !== 'production';
@@ -22,9 +23,10 @@ function getEntry(globPath = './src/pages/**/*.html', pathDir = "./src/pages/") 
 	});
 	return entries;
 }
-let pages = getEntry();
+let pages = getEntry('./src/pages_' + dir + '/**/!(_*).html', "./src/pages_" + dir + "/");
+console.log(pages)
 module.exports = {
-	baseUrl: '../',
+	baseUrl: '/',
 	pages,
 	productionSourceMap: false,
 	devServer: {
@@ -32,6 +34,7 @@ module.exports = {
 	},
 	filenameHashing: debug,
 	runtimeCompiler: true,
+	outputDir: "dist/" + dir,
 	chainWebpack: config => {
 		//不压缩html
 		for (const key in pages) {
