@@ -1,9 +1,3 @@
-/**
- * 原作者: cbwfree<cbwfree@163.com>
- * 原链接: http://fly.layui.com/jie/4567/
- * 修订者: csersoft
- * 版本:  1.0.0
- */
 declare module layui {
     type LayerCallbackSuccess = null | ((layero: JQuery, index: number) => void);
     type LayerCallbackYes = null | ((index: number, layero: JQuery) => boolean | void);
