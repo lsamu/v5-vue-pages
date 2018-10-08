@@ -23,7 +23,7 @@ function getEntry(globPath = './src/pages/**/*.html', pathDir = "./src/pages/") 
 	});
 	return entries;
 }
-let pages = getEntry('./src/pages_' + dir + '/**/!(_*).html', "./src/pages_" + dir + "/");
+let pages = getEntry('./src/pages/' + dir + '/**/!(_*).html', "./src/pages_" + dir + "/");
 module.exports = {
 	baseUrl: '/',
 	pages,
