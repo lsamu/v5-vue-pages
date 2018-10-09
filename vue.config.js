@@ -3,7 +3,7 @@
  * html 图片解析 包含文件 html-withimg-loader 
  * html 中vue中SEO优化 预编译 prerender-spa-plugin
  */
-let dir = "bohe_cn"; //模板目录 default qimiao bohe(国际版) bohe_cn(国内版)
+let dir = "bohe"; //模板目录 default qimiao bohe(国际版) bohe_cn(国内版)
 let path = require('path');
 let glob = require('glob');
 const debug = process.env.NODE_ENV !== 'production';

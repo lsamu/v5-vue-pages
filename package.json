@@ -8,8 +8,10 @@
   },
   "dependencies": {
     "@types/jquery": "^3.3.12",
+    "axios": "^0.18.0",
     "jquery": "^3.3.1",
     "layui-src": "^2.3.0",
+    "ts-md5": "^1.2.4",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.2.0"
