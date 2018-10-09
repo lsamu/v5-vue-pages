@@ -27,5 +27,6 @@ export default class TestVue extends Vue {
 
 new TestVue({
   el: "#app",
+  
   //render:(h)=>h(App)
 });
