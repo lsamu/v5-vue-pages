@@ -14,8 +14,8 @@ for (const item of a) {
 
 let b = [5, 6];
 
-let c = [a, ..."7"]
-let d = [..."7", a]
+// let c = [a, ..."7"]
+// let d = [..."7", a]
 let e = a.concat(b);
 
 function aa() {
