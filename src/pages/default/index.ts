@@ -5,13 +5,10 @@ console.log("index1231231212");
 
 
 import Vue from 'vue'
-import App from '@/vues/hello.vue'
-import { md5Utils } from '@/utils/md5Utils';
+import HelloWorld from '@/components/HelloWorld.vue'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(App)
+  render: h => h(HelloWorld)
 }).$mount('#app')
-
-new md5Utils().test();
