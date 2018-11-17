@@ -51,5 +51,13 @@ module.exports = {
 			.test(/\.(htm|html)$/i)
 			.use('html-withimg-loader')
 			.loader('html-withimg-loader');
+
+		//修改copy
+		config.plugin('copy')
+			.tap(args => {
+				args[0][0].from = './src/pages/' + dir + "/public";
+				console.log(args);
+				return args;
+			});
 	}
 }
